@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,x;
+	cin>>n;
+	vector<int> ev, odd;
+for(int i=0;i<n;i++) 
+{
+     cin >> x;
+     if(x&1) 
+	 	odd.push_back(x);
+     else 
+	 	ev.push_back(x);
+}
+sort(ev.begin(), ev.end());
+sort(odd.begin(), odd.end());
+for(auto i:ev) cout << i << " ";
+cout << accumulate(ev.begin(), ev.end(), 0) << " ";
+for(auto i:odd) cout << i << " ";
+cout << accumulate (odd.begin(), odd.end(), 0);
+}
