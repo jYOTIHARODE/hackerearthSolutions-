@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int count=0;
+    string s,sc;
+    cin>>s;
+    sc=s;
+    reverse(s.begin(),s.end());
+    for(int i=0;i<s.length();i++)
+    {
+        if(s[i]==sc[i])
+        {
+            if((s[i]=='a')||(s[i]=='e')||(s[i]=='i')||
+            (s[i]=='o')||(s[i]=='u'))
+            {
+                count++;
+            }
+        }
+    }
+    cout<<count;
+    return 0;
+}
