@@ -1,0 +1,17 @@
+def caseConversion (s):
+    s1 = ''
+    s2 = ''
+    s1 = s[0].lower()
+    for i in s[1:]:
+        if i.isupper():
+            s1 += '_' + i.lower()
+        else:
+            s1 += i.lower()
+    return s1
+
+T = int(input())
+for _ in range(T):
+    s = input()
+
+    out= caseConversion(s)
+    print (out)
