@@ -1,0 +1,8 @@
+l=list(input().split())
+c=0
+for i in l:
+	x=list(i)
+	y=set(x)
+	if(len(x)!=len(y)):
+		c+=1
+print(c)
