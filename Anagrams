@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+void tc() 
+{
+
+   string a,b; cin >> a >> b;
+   int hash[26] = {0};
+     int count = 0;
+
+   for (char ch : a) 
+   {
+        int x = ch - 'a';
+       hash[x]++;
+       count++;
+   }
+
+   for (char ch : b) {
+
+       int x = ch - 'a';
+
+       if (hash[x]) 
+       {
+           count--;
+           hash[x]--;
+       } 
+       else 
+       {
+             count++;
+       }
+   }
+
+   cout << count << "\n";
+
+}
+
+ 
+
+int main() 
+{
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
+   int T; cin >> T;
+   while (T--) 
+   {
+       tc();
+   }
+   return 0;
+
+}
