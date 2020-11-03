@@ -1,0 +1,67 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int size;
+    cin>>size;
+
+    vector<int>arr(size),brr(size);
+    for(int i=0;i<size;i++)
+     cin>>arr[i];
+
+    for(int i=0;i<size;i++)
+        cin>>brr[i];
+
+    int aa=0,bb=0,sum1=0,sum2=0;
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]>=0)
+            sum1+=arr[i];
+        else
+         aa++;
+    }
+
+    for(int i=0;i<size;i++)
+    {
+        if(brr[i]>=0)
+            sum2=sum2+brr[i];
+        else
+         bb++;
+    }
+    if(aa==0&&bb==1)
+    {
+         if(sum1>=sum2)
+     cout<<1;
+
+     else
+         cout<<0;
+    }
+
+    else if(aa==1&&bb==0)
+    {
+        if(sum2>=sum1)
+         cout<<1;
+        else
+         cout<<0;
+    }
+    
+    else if(aa==0&&bb==2)
+    {
+        if(sum1>=sum2)
+        cout<<abs(sum1-sum2)+1;
+     else
+        cout<<0;
+    }
+
+    else if(aa==2&&bb==0)
+    {
+        if(sum2>=sum1)
+         cout<<abs(sum1-sum2)+1;
+        else
+         cout<<0;
+    }
+    else
+     cout<<"Infinite";
+    return 0;
+}
