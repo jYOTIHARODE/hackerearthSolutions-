@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int test_case;cin>>test_case;
+    while(test_case--)
+    {
+        string str;cin>>str;
+        int len = str.size();
+        int A[122];
+        for(int i=0;i<len;i++)
+        {
+            A[str[i]]++;
+        }
+        int count=0;
+        for(int i=0; i<len; i++)
+        {
+            if(A[str[i]]!=0)
+            {
+                count++;
+                A[str[i]]=0;
+            }
+        }
+        if(count%2==0)
+        {
+            cout<<"Player2"<<endl;
+        }
+        else
+        {
+            cout<<"Player1"<<endl;
+        }
+    }
+return 0;
+}
