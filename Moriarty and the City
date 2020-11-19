@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+    ll num,res=0,j=0,k=0;cin>>num;
+    if(num>100000000)
+    	num=100000000;
+    while(num--)
+    {
+        ll var;cin>>var;
+        if(var==0)
+        {
+         j++;
+         res=max(res,j);
+         k=0;
+        }
+        else
+        {
+            k++;
+            res=max(res,k);
+            j=0;
+        }
+    }
+	cout<<res;
+    return 0;
+}
