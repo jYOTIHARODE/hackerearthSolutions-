@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool solve(char ch)
+{
+    if(ch == 'a' || ch == 'e' || ch =='i' || ch =='o' || ch == 'u')
+    return true;
+    return false;
+}
+
+int main()
+{
+    ios_base :: sync_with_stdio(false);cin.tie(0);cout.tie(0);
+int size; cin>>size;
+string str; cin>>str;
+set<char>sets;
+for(int i = 0 ; i < size; i++)
+    if(solve(str[i]))
+        sets.insert(str[i]);
+    if(sets.size() == 5)   cout<<"YES";
+    else    cout<<"NO";
+return 0;
+}
