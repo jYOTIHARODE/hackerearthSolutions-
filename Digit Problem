@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str;
+    int var;
+    cin>>str>>var;
+    for(int i =0; i<var;i++)
+    {
+        if(str[i]=='9')
+            var+=1;
+        str[i]='9';
+    }
+    cout<<str;
+    return 0;
+}
