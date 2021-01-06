@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t ; cin>>t;
+    while(t--)
+    {
+        int sh,sm,eh,em; cin>>sh>>sm>>eh>>em;
+        if(em<sm)
+        {
+            cout<<((eh-1)-sh)<<" "<<((em+60)-sm)<<endl;
+        }
+        else
+        {
+            cout<<(eh-sh)<<" "<<(em-sm)<<endl;
+        }
+    }    
+}
