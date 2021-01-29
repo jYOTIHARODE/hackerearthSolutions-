@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t; cin>>t;
+    while(t--)
+    {
+       string s; cin>>s;
+       int count1=0,count2=0,count3=0;
+       for(int i=0 ; i<s.length() ; i++)
+       {
+           if(s[i]=='x')    count1++;
+           if(s[i]=='y')    count2++;
+           if(s[i]=='z')    count3++;
+       }
+        if(count1>=2 && count2>=2 && count3>=2)
+            cout<<"YES";
+        else
+            cout<<"NO";
+        cout<<endl;    
+    }
+    return 0;
+}
+
+
