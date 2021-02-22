@@ -1,0 +1,17 @@
+#include<bits/stdc++.h> 
+using namespace std; 
+
+
+int main() 
+{ 
+	int n; cin >> n;
+  string str; cin >> str;
+
+  int hash[26] = {0};
+  for(char c:str) 
+  {
+    hash[c-'a']++;
+  }
+
+  cout << *max_element(hash, hash+26);
+}
