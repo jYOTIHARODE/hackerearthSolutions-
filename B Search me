@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   string txt,pat;
+   getline(cin,txt);
+   pat = "to the";
+
+   int m=txt.length();
+   int n=pat.length();
+   int j,flag=0;
+    for(int i=0;i<=m-n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(txt[i+j]!=pat[j])
+            break;
+        }        
+        if(j==n)
+        {
+          if(i==0)
+          {
+              if(txt[i+6]==' '||txt[i+6]=='\0')
+              {
+                flag=1;
+               break;
+              }
+          }  
+          else
+          {
+            if(i+6==m)
+            {
+                  if(txt[i-1]==' ')
+                      {
+                          flag=1;
+                          break;
+                        }
+              }
+              else
+              {
+                  if(txt[i-1]==' '&&txt[i+6]==' ')
+                    {
+                        flag=1;
+                        break;
+                    }
+              }
+          }
+    }
+   }
+   if(flag==1)
+            cout<<"YES";
+   else   cout<<"NO";
+return 0;
+}
