@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+#define ll long long int 
+using namespace std;
+int main()
+{
+    ll t; cin>>t;
+    while(t--)
+    {
+        ll n,k; cin>>n>>k;
+        ll p = 2*k+1;
+        if(n%p==0)  cout<<n/p<<endl;
+        else    cout<<n/p+1<<endl;
+    }
+    return 0;
+    
+}
+
+
